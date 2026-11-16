@@ -8,3 +8,6 @@
 # add that one. For examples of other branding components, see
 # the calamares-extensions repository.
 calamares_add_branding_subdirectory( default )
+
+# Ryū Installer: the Ryū OS branding component, which Ryū OS's settings.conf selects.
+calamares_add_branding_subdirectory( ryu )

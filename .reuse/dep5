@@ -92,3 +92,11 @@ Files: lang/python/*/LC_MESSAGES/python.po
 License: GPL-3.0-or-later
 Copyright: 2020 Calamares authors and translators
 
+
+### RYŪ INSTALLER
+#
+# Ryū OS's branding pictures and logo (the text files carry SPDX headers).
+#
+Files: src/branding/ryu/*.png src/branding/ryu/art/logo.svg
+License: GPL-3.0-or-later
+Copyright: 2026 David Kendig

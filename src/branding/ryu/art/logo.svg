@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208" height="208" viewBox="0 0 208 208" role="img" aria-labelledby="title description">
+  <title id="title">Ryū OS dragon</title>
+  <desc id="description">An open-coiled indigo dragon with a crystalline slit eye and a cyan-tipped tail.</desc>
+  <defs>
+    <linearGradient id="coil" gradientUnits="userSpaceOnUse" x1="42" y1="155" x2="157" y2="29">
+      <stop stop-color="#4233af" />
+      <stop offset=".5" stop-color="#5a45d6" />
+      <stop offset="1" stop-color="#7963ef" />
+    </linearGradient>
+    <linearGradient id="tide" gradientUnits="userSpaceOnUse" x1="37" y1="166" x2="165" y2="125">
+      <stop stop-color="#5143c8" />
+      <stop offset=".53" stop-color="#547bf0" />
+      <stop offset="1" stop-color="#39cbd5" />
+    </linearGradient>
+    <linearGradient id="brow" gradientUnits="userSpaceOnUse" x1="69" y1="14" x2="186" y2="70">
+      <stop stop-color="#b3a6fc" />
+      <stop offset="1" stop-color="#7661e9" />
+    </linearGradient>
+  </defs>
+  <g id="dragon" transform="translate(-5 8)">
+    <path fill="url(#coil)" d="M201 67 193 85Q189 95 178 97L159 101 140 117 144 102       C133 101 129 92 119 88 102 81 84 89 78 106       C69 131 89 154 115 155 141 156 163 143 178 120       C171 159 139 184 101 184 54 184 17 150 17 105 17 77 32 53 56 39       L35 25Q60 23 84 32L63 8Q95 12 122 33Q143 28 160 39       L146 43 166 59 186 63 192 58Z" />
+    <path fill="url(#tide)" d="M22 134C39 160 70 169 98 163Q108 161 115 155       C141 156 163 143 178 120 171 159 139 184 101 184 64 184 34 164 22 134Z" />
+    <path fill="url(#brow)" d="M63 8Q95 12 122 33Q143 28 160 39L146 43 166 59       C148 53 134 47 121 40 98 28 77 21 63 8Z" />
+    <path fill="#f2f6ff" d="M116 56Q130 55 150 65 141 73 133 70 124 67 116 56Z" />
+    <path fill="#332979" d="M137 59 139 63 136 70 134 65Z" />
+  </g>
+</svg>

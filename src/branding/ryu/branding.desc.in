@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2026 David Kendig
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Ryū OS installer branding. CMake fills in the version and release name from the
+# RYU_VERSION and RYU_CODENAME cache variables. The pictures were drawn by
+# art/installer_art.py on the boot menu's aurora; the logo is art/logo.svg.
+---
+componentName: ryu
+welcomeStyleCalamares: false
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 980px,620px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+
+strings:
+    productName: "Ryū OS"
+    shortProductName: "Ryū"
+    version: "@RYU_VERSION@ (@RYU_CODENAME@)"
+    shortVersion: "@RYU_VERSION@"
+    versionedName: "Ryū OS @RYU_VERSION@"
+    shortVersionedName: "Ryū @RYU_VERSION@"
+    bootloaderEntryName: "Ryu OS"
+
+images:
+    productIcon: "icon.png"
+    productLogo: "logo.png"
+    productWelcome: "welcome.png"
+
+# The sidebar: the aurora's indigo, with the violet ribbon marking the current step.
+style:
+    SidebarBackground: "#0d1236"
+    SidebarText: "#c3cbff"
+    SidebarTextCurrent: "#ffffff"
+    SidebarBackgroundCurrent: "#5a45d6"
+
+# Shown while the system is copied (pictures; no QML needed).
+slideshow:
+    - "slide1.png"
+    - "slide2.png"
+    - "slide3.png"

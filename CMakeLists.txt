@@ -748,6 +748,9 @@ if(INSTALL_CONFIG)
     install(FILES settings.conf DESTINATION share/calamares)
 endif()
 
+# Ryū Installer: Ryū OS's settings.conf and module configs (see ryu/CMakeLists.txt).
+add_subdirectory(ryu)
+
 ### Uninstall
 #
 #

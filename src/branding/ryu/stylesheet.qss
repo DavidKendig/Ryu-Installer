@@ -1,0 +1,144 @@
+/*
+ * SPDX-FileCopyrightText: 2026 David Kendig
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+/*
+ * Ryū OS installer: the colours of the boot menu's aurora wallpaper.
+ * Deep indigo base, azure and violet fields, cyan and lilac ribbons.
+ */
+
+QWidget {
+    color: #e8ebff;
+    font-family: "Inter", "DejaVu Sans", sans-serif;
+    font-size: 10pt;
+}
+
+/* Main window: a dark aurora field behind every page. */
+#mainApp {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0b1b40, stop:0.45 #10123a, stop:0.8 #1d1145, stop:1 #2b1240);
+}
+#sidebarApp {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #12336f, stop:0.55 #171759, stop:1 #361452);
+}
+#logoApp { padding: 18px 10px 10px 10px; }
+QStackedWidget, QScrollArea, QAbstractScrollArea, #viewManager, #viewManagerStack,
+#scrollAreaWidgetContents, #slideshow, #backgroundWidget, QLabel, QRadioButton, QCheckBox, QGroupBox {
+    background: transparent;
+}
+QDialog, QMessageBox, QMenu {
+    background-color: #12163d;
+}
+/* QScrollArea fills its contents with the palette's window colour: keep the aurora. */
+QScrollArea > QWidget > QWidget, #slideshow QLabel, #slideshow QWidget {
+    background: transparent;
+}
+/* Summary: each step's text sits on a faint glass panel. */
+#summaryItemBody {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    color: #e8ebff;
+}
+/* The partition legend draws its text in black: give it a light chip to sit on. */
+PartitionLabelsView {
+    background-color: #e6eaff;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Buttons: glassy outlines; "Next" / "Install" carries the azure-to-violet ribbon. */
+QPushButton, QToolButton {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 6px 16px;
+    color: #eef0ff;
+}
+QPushButton:hover, QToolButton:hover { background-color: rgba(255, 255, 255, 0.15); }
+QPushButton:pressed, QToolButton:pressed { background-color: rgba(255, 255, 255, 0.05); }
+QPushButton:disabled, QToolButton:disabled {
+    color: rgba(232, 235, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+#view-button-next {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #3f7cff, stop:1 #8a4dff);
+    border: none;
+    font-weight: 600;
+    color: #ffffff;
+}
+#view-button-next:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #5b90ff, stop:1 #9d66ff);
+}
+#view-button-next:disabled { background: rgba(255, 255, 255, 0.08); color: rgba(232, 235, 255, 0.35); }
+
+/* Inputs and lists */
+QLineEdit, QComboBox, QSpinBox, QTextEdit, QPlainTextEdit, QListView, QListWidget, QTreeView, QTableView {
+    background-color: rgba(6, 9, 32, 0.78);
+    border: 1px solid #2d3577;
+    border-radius: 6px;
+    padding: 4px 6px;
+    selection-background-color: #5a45d6;
+    selection-color: #ffffff;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus, QListView:focus, QTreeView:focus {
+    border: 1px solid #8ec8f0;
+}
+QComboBox::drop-down { border: none; width: 22px; }
+QComboBox::down-arrow { image: url(/usr/share/calamares/branding/ryu/arrow-down.png); width: 12px; height: 8px; }
+QComboBox QAbstractItemView {
+    background-color: #12163d;
+    border: 1px solid #2d3577;
+    selection-background-color: #5a45d6;
+}
+QListView::item, QTreeView::item { padding: 3px; }
+QListView::item:selected, QTreeView::item:selected, QListWidget::item:selected {
+    background-color: #5a45d6;
+    color: #ffffff;
+}
+QListView::item:hover, QTreeView::item:hover { background-color: rgba(142, 200, 240, 0.12); }
+QHeaderView::section {
+    background-color: #151b4c;
+    color: #c3cbff;
+    border: none;
+    padding: 4px 6px;
+}
+
+QRadioButton::indicator, QCheckBox::indicator { width: 16px; height: 16px; }
+QGroupBox {
+    border: 1px solid #2d3577;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding-top: 6px;
+}
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 4px; color: #c3cbff; }
+
+/* Progress: the cyan, violet and lilac ribbons of the aurora. */
+QProgressBar {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 6px;
+    min-height: 12px;
+    max-height: 12px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar::chunk {
+    border-radius: 6px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8ec8f0, stop:0.5 #7b6cff, stop:1 #c48ae6);
+}
+
+QScrollBar:vertical { background: transparent; width: 10px; margin: 2px; }
+QScrollBar::handle:vertical { background: rgba(255, 255, 255, 0.20); border-radius: 4px; min-height: 30px; }
+QScrollBar:horizontal { background: transparent; height: 10px; margin: 2px; }
+QScrollBar::handle:horizontal { background: rgba(255, 255, 255, 0.20); border-radius: 4px; min-width: 30px; }
+QScrollBar::add-line, QScrollBar::sub-line { width: 0; height: 0; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
+
+QToolTip {
+    background-color: #12163d;
+    color: #e8ebff;
+    border: 1px solid #2d3577;
+    padding: 4px;
+}
+QMenu::item:selected { background-color: #5a45d6; }
